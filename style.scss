@@ -246,4 +246,125 @@ body {
         z-index: 100;
         fill: rgba(255, 255, 255, 0.31);
     }
+
+    &__journey {
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 18px 38px 0 rgba(0, 0, 0, 0.11);
+        border-radius: 10px;
+        padding: 22px 26px 22px 37px;
+        box-sizing: border-box;
+        z-index: 80;
+        margin-top: -25px;
+        display: flex;
+
+        &-topSVG {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -26px;
+        }
+
+        &-border {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 3px;
+        }
+
+        &-container {
+            position: relative;
+            padding: 13.5px 46px;
+            background: #fff;
+            box-sizing: border-box;
+            border-radius: 67px;
+            z-index: 100;
+            margin-top: 49px;
+
+            & span {
+                font-weight: 400;
+                font-size: 25px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Forum';
+                color: #79655e;
+            }
+        }
+
+        &-top {
+            display: flex;
+            
+            align-items: center;
+
+            & span {
+                font-weight: 300;
+                font-size: 18px;
+                font-family: 'Manrope';
+                color: #79655e;
+            }
+        }
+
+        &-bottom {
+            font-weight: 500;
+            font-size: 18px;
+            font-family: 'Manrope';
+            color: #0c0b10;
+        }
+
+        &-find {
+            display: flex;
+            border-radius: 121px;
+            background-color: #0c0b10;
+            padding: 22px 23.5px;
+            box-sizing: border-box;
+            gap: 8px;
+            align-items: center;
+            margin-right: 0;
+            margin-left: auto;
+
+            & span {
+                font-weight: 400;
+                font-size: 24px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                text-align: center;
+                color: #fff;
+                font-family: 'Forum';
+            }
+        }
+
+        &-left {
+            margin-top: 3.5px;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-travellers {
+            display: flex;
+            gap: 8px;
+            margin: 14px 0 8px 0;
+        }
+
+        &-data {
+            display: flex;
+            gap: 8px;
+            margin: 14px 58px 8px 0;
+        }
+
+        &-destination {
+            display: flex;
+            gap: 8px;
+            margin: 14px 134px 8px 0;
+        }
+
+        &-type {
+            display: flex;
+            gap: 8px;
+            margin: 14px 71px 8px 0;
+        }
+    }
 }   
