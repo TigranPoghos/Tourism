@@ -62,6 +62,52 @@ body {
   display: flex;
 }
 
+.title {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 97%;
+  text-align: center;
+  color: #0c0b10;
+  font-family: "Forum";
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 99%;
+  font-family: "Forum";
+  color: #fff;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
 .header {
   flex: 0 0 auto;
   position: absolute;
@@ -327,4 +373,165 @@ body {
   display: flex;
   gap: 8px;
   margin: 14px 71px 8px 0;
+}
+
+.rated {
+  margin-top: -33px;
+  overflow: hidden;
+}
+.rated__row {
+  flex-direction: column;
+}
+.rated__title {
+  z-index: 100;
+  position: relative;
+  text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.rated__title svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rated__container {
+  padding: 0 0 0 165px;
+}
+.rated__nav {
+  margin-left: 250px;
+  margin-top: 58px;
+  margin-bottom: 23px;
+}
+.rated__menu {
+  display: flex;
+  gap: 36.5px;
+}
+.rated__menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rated__menu-button span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 99%;
+  color: #79655e;
+  font-family: "Forum";
+}
+.rated__menu-button svg {
+  display: none;
+}
+.rated__menu-button.active span {
+  color: #0c0b10;
+}
+.rated__menu-button.active svg {
+  display: block;
+}
+.rated__swiper {
+  margin-left: 165px !important;
+  position: relative;
+  overflow: hidden;
+}
+.rated__swiper-slide {
+  width: 350px !important;
+  min-width: 350px;
+  height: 570px;
+  padding: 35px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.rated__swiper-button {
+  position: absolute;
+  top: 222px;
+  right: 261px;
+}
+.rated__austria {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0b2034 100%), url("../image/rated/rated__austria.jpg");
+  background-size: 100% 335px, cover;
+  background-position: bottom, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.rated__peru {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0b2034 100%), url("../image/rated/rated__peru.jpg");
+  background-size: 100% 335px, cover;
+  background-position: bottom, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.rated__croatia {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0b2034 100%), url("../image/rated/rated__croatia.jpg");
+  background-size: 100% 335px, cover;
+  background-position: bottom, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.rated__jordan {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0b2034 100%), url("../image/rated/rated__jordan.jpg");
+  background-size: 100% 335px, cover;
+  background-position: bottom, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.rated__left {
+  text-align: left;
+}
+.rated__left-country {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+.rated__left-country span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  font-family: "Manrope";
+}
+.rated__left-price {
+  margin-top: 30px;
+  display: flex;
+  gap: 22px;
+}
+.rated__left-price-12 {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Manrope";
+}
+.rated__left-price-24 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 99%;
+  font-family: "Forum";
+  color: #fff;
+}
+.rated__left-button {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: "Forum";
+  border: 0.62px solid #fff;
+  border-radius: 61px;
+  padding: 10px 28px;
+  box-sizing: border-box;
+}
+.rated__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rated__right span {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Manrope";
+  color: #fff;
+  display: flex;
+  margin-bottom: 5px;
+}
+.rated__right svg:not(:last-child) {
+  margin-bottom: 2px;
 }
