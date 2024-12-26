@@ -417,7 +417,8 @@ body {
 
 .rated {
     margin-top: -33px;
-    overflow: hidden;
+    overflow-x: hidden;
+    z-index: 100;
 
     &__row {
         flex-direction: column;
@@ -489,9 +490,8 @@ body {
         overflow: hidden;
 
         &-slide {
-            width: 350px !important;
             min-width: 350px;
-            height: 570px;
+            min-height: 570px;
             padding: 35px;
             box-sizing: border-box;
             justify-content: space-between;
@@ -603,5 +603,666 @@ body {
         & svg:not(:last-child) {
             margin-bottom: 2px;
         }
+    }
+}
+
+.luxury {
+    margin-top: -114px;
+    background: linear-gradient(180deg, #e2d3ce 0%, #c9c8d8 30.73%, #d4d8c6 59.38%, #e2d3ce 100%);
+    position: relative;
+
+    &__row {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 570px;
+        padding: 240px 0 320px 0;
+    }
+
+    &__card {
+        height: 570px;
+        padding: 67px 50px 45px 50px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+
+        &-title {
+            text-align: center;
+        }
+
+        &-btn {
+            display: flex;
+            flex-direction: column;
+            padding: 92px 34px;
+            box-sizing: border-box;
+            align-items: center;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &-number {
+            font-size: 35px;
+            z-index: 1;
+        }
+        
+        &-arrow {
+            z-index: 1;
+        }
+
+        &-place {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 99%;
+            text-align: center;
+            color: #fff;
+            font-family: 'Forum';
+            margin-bottom: 9px;
+            display: flex;
+            margin-top: -3px;
+            z-index: 1;
+        }
+
+        &-border {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &-fon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            backdrop-filter: blur(20px);
+        }
+
+        &:nth-child(1) {
+            margin-top: 120px;
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        &:nth-child(2) {
+            grid-column: 1;
+            background: linear-gradient(180deg, #0b2034 0%, rgba(0, 0, 0, 0) 100%), url('../image/luxury/luxury__destinations.jpg');
+            background-size: 100% 180px, cover;
+            background-position: top, center;
+            background-repeat: no-repeat, no-repeat;
+            grid-row: 2;
+            margin-top: -23px;
+        }
+
+        &:nth-child(3) {
+            grid-column: 2;
+            background-color: yellow;
+            margin-top: 120px;
+            grid-row: 1;
+            background: linear-gradient(180deg, #0b2034 0%, rgba(0, 0, 0, 0) 100%), url('../image/luxury/luxury__winter.jpg');
+            background-size: 100% 180px, cover;
+            background-position: top, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+
+        &:nth-child(4) {
+            grid-column: 2;
+            background-color: yellow;
+            grid-row: 2;
+            margin-top: 120px;
+            background: linear-gradient(180deg, #0b2034 0%, rgba(0, 0, 0, 0) 100%), url('../image/luxury/luxury__health.jpg');
+            background-size: 100% 180px, cover;
+            background-position: top, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+
+        &:nth-child(5) {
+            grid-column: 3;
+            background-color: red;
+            grid-row: 1;
+            background: linear-gradient(180deg, #0b2034 0%, rgba(0, 0, 0, 0) 100%), url('../image/luxury/luxury__extra.jpg');
+            background-size: 100% 180px, cover;
+            background-position: top, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+
+        &:nth-child(6) {
+            grid-column: 3;
+            background-color: red;
+            grid-row: 2;
+            background: linear-gradient(180deg, #0b2034 0%, rgba(0, 0, 0, 0) 100%), url('../image/luxury/luxury__crowd.jpg');
+            background-size: 100% 180px, cover;
+            background-position: top, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+    }
+
+    &__title {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        padding: 0;
+
+        & span {
+            text-align: left;
+        }
+
+        & button {
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-align: center;
+            border: 0.62px solid #0c0b10;
+            border-radius: 61px;
+            padding: 10px 36.5px;
+            box-sizing: border-box;
+            max-width: max-content;
+        }
+    }
+}
+
+.book {
+    margin-top: -741px;
+    position: relative;
+    padding-top: 580px;
+    box-sizing: border-box;
+
+    &__row {
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+        padding-bottom: 9px;
+        box-sizing: border-box;
+    }
+    
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 74px;
+        gap: 30px;
+    }
+
+    &__card {
+        position: relative;
+        padding: 74px;
+        box-sizing: border-box;
+
+        &:nth-child(1) {
+            background: url('../image/book/book__car.jpg');
+        }
+
+        &:nth-child(2) {
+            background: url('../image/book/book__hotel.jpg');
+        }
+
+        &:nth-child(3) {
+            background: url('../image/book/book__villa.jpg');
+        }
+
+        &:nth-child(4) {
+            background: url('../image/book/book__yacht.jpg');
+        }
+
+        &:nth-child(5) {
+            background: url('../image/book/book__hellicopter.jpg');
+        }
+
+        &:nth-child(6) {
+            background: url('../image/book/book__jet.jpg');
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 99%;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            font-family: 'Forum';
+            width: 392px;
+        }
+    }
+
+    &__beach {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.why {
+    background: url('../image/why/why__mountain.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding: 113.5px 190px 203.5px 285px;
+    }
+
+    &__title {
+        text-align: left;
+        grid-row: 1;
+        grid-column: 1;
+        margin-right: 65px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 101%;
+        font-family: 'Forum';
+        color: #0c0b10;
+
+        &-first {
+            max-width: 265px;
+            grid-row: 2;
+            grid-column: 1;
+            margin-bottom: 148px;
+        }
+
+        &-second {
+            max-width: 352px;
+            grid-row: 3;
+            grid-column: 2;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__text {
+        max-width: 255px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        color: #000;
+        font-family: 'Manrope';
+
+        &-first {
+            grid-row: 1;
+            grid-column: 2;
+            margin-bottom: 432px;
+        }
+
+        &-second {  
+            grid-row: 2;
+            grid-column: 2;
+        }
+    }
+
+    &__button {
+        grid-row: 4;
+        grid-column: 2;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Forum';
+        color: #0c0b10;
+        border: 0.62px solid #0c0b10;
+        border-radius: 61px;
+        padding: 10px 31px;
+        max-width: max-content;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    &__pin {
+        &-1 {
+            position: absolute;
+            left: 664px;
+            top: 343px;
+            z-index: 1;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            backdrop-filter: blur(5px);
+            fill: rgba(255, 255, 255, 0.31);
+        }
+
+        &-2 {
+            top: 545px;
+            left: 470px;
+            position: absolute;
+            z-index: 1;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            backdrop-filter: blur(8px);
+            fill: rgba(255, 255, 255, 0.31);
+        }
+    }
+
+    &__photo {
+        &-1 {
+            position: absolute;
+            top: 247px;
+            left: 217px;
+        }
+
+        &-2 {
+            top: 366px;
+            right: 412px;
+            position: absolute;
+        }
+
+        &-3 {
+            position: absolute;
+            top: 519px;
+            right: 154px;
+        }
+
+        &-4 {
+            left: 390px;
+            bottom: 94px;
+            position: absolute;
+            z-index: 1;
+
+            & .why__photo-bottom {
+                bottom: -16%;
+            }
+        }
+
+        &-left {
+            top: 140px;
+            left: -11px;
+            position: absolute;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            backdrop-filter: blur(11px);
+            fill: rgba(255, 255, 255, 0.31);
+        }
+
+        &-bottom {
+            bottom: -12%;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            fill: rgba(255, 255, 255, 0.31);
+            backdrop-filter: blur(11.640625px);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        &-right {
+            position: absolute;
+            top: 122px;
+            right: -22px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            backdrop-filter: blur(11px);
+            fill: rgba(255, 255, 255, 0.31);
+        }
+    }
+}
+
+.custom {
+    position: relative;
+
+    &__row {
+        padding-top: 30px;
+        flex-direction: column;
+        padding: 30px 285px 460px 285px;
+        box-sizing: border-box;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__content {
+        display: flex;
+        gap: 125px;
+        margin: 105px 0 126px 47px;
+    }
+
+    &__left {
+        &-first {
+            position: relative;
+            margin-top: 38.5px;
+        }
+
+        &-second {
+            position: relative;
+            margin-top: 208px;
+        }
+
+        &-third {
+            position: relative;
+            margin-top: 206px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 73px;
+            line-height: 99%;
+            text-align: center;
+            font-family: 'Forum';
+            color: #0c0b10;
+        }
+
+        &-pin {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &-line {
+            width: 1px;
+            height: 67px;
+            transform: translateX(-50%);
+            background-color: #fff;
+            position: absolute;
+            bottom: calc(-100% - 67px);
+            left: 50%;
+        }
+    }
+
+    &__right {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+
+        &-subtitle {
+            color: #0c0b10;
+            max-width: 253px;
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            max-width: 321px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 180%;
+            color: #000;
+            font-family: 'Manrope';
+            margin-bottom: 110px;
+        }
+    }
+
+    &__cloud {
+        &-1 {
+            position: absolute;
+            top: -294px;
+            left: 36px;
+            width: auto;
+            transform: rotate(6deg);
+            z-index: 5;
+        }
+    
+        &-2 {
+            position: absolute;
+            top: -238px;
+            right: 0;
+            width: auto;
+            z-index: 5;
+        }
+
+        &-3 {
+            position: absolute;
+            top: 312px;
+            right: 0;
+            z-index: 5;
+            width: auto;
+        }
+
+        &-4 {
+            position: absolute;
+            top: 381px;
+            z-index: 5;
+            left: 0;
+            width: auto;
+        }
+    }
+
+    &__btn {
+        border-radius: 74px;
+        padding: 14.5px 109px;
+        box-sizing: border-box;
+        background-color: #0c0b10;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 18px;
+
+        & span {
+            font-weight: 400;
+            font-size: 24px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: 'Forum';
+            color: #fff;
+        }
+    }
+
+    &__bottom-text {
+        color: #0c0b10;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: max-content;
+        margin-bottom: 0;
+    }
+
+    &__fon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.advice {
+    margin-top: -306px;
+    z-index: 5;
+    margin-bottom: 112px;
+
+    &__row {
+        padding: 94px 195px 134px 185px;
+        box-sizing: border-box;
+        background: url('../image/advice/advice__fon.png');
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    &__title {
+        max-width: 400px;
+        color: white;
+        margin-bottom: 18px;
+        text-align: left;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        font-family: 'Manrope';
+        color: #fff;
+        margin-bottom: 61px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        padding: 13px 115px 13px 30px;
+        border: 1px solid #fff;
+        border-radius: 95px;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.14);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        color: #0c0b10;
+        font-family: 'Manrope';
+        width: 100%;
+        max-width: 486px;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 180%;
+            color: #0c0b10;
+            font-family: 'Manrope';
+        }
+    }
+
+    &__btn {
+        font-weight: 400;
+        font-size: 24px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #0c0b10;
+        font-family: 'Forum';
+        border-radius: 74px;
+        background-color: #fff;
+        padding: 14.5px 108px;
+        box-sizing: border-box;
+        margin-left: -86px;
+        z-index: 1;
+        position: relative;
+
+        &-border {
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-top {
+            position: absolute;
+            top: -26px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-bottom {
+            position: absolute;
+            top: calc(100% + 3px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__border {
+        position: absolute;
+        top: -18px;
+        left: 20px;
+        z-index: -1;
+    }
+
+    &__top {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -38px;
     }
 }
