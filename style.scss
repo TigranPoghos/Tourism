@@ -417,7 +417,6 @@ body {
 
 .rated {
     margin-top: -33px;
-    overflow-x: hidden;
     z-index: 100;
 
     &__row {
@@ -488,6 +487,7 @@ body {
         margin-left: 165px !important;
         position: relative;
         overflow: hidden;
+        max-width: calc(100vw - 165px);
 
         &-slide {
             min-width: 350px;
@@ -500,7 +500,8 @@ body {
         &-button {
             position: absolute;
             top: 222px;
-            right: 261px;
+            right: 96px;
+            z-index: 1;
         }
     }
 
@@ -1156,7 +1157,7 @@ body {
 .advice {
     margin-top: -306px;
     z-index: 5;
-    margin-bottom: 112px;
+    margin-bottom: 159px;
 
     &__row {
         padding: 94px 195px 134px 185px;
@@ -1264,5 +1265,26 @@ body {
         left: 50%;
         transform: translateX(-50%);
         top: -38px;
+    }
+}
+
+.rewiev {
+    &__row {
+        flex-direction: column;
+    }
+
+    &__title {
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 103px;
+
+        & svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
     }
 }

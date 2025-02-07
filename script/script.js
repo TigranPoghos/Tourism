@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
         loop: true,
         allowTouchMove: false,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".rated__swiper-button",
         },
     });
 
@@ -31,11 +30,27 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         });
 
+        if (visibleCount === 0) {
+            alert('Нет карточек для выбранного континента!');
+
+            updateCardsAndButton('world');
+
+            ratedMenuButtons.forEach(button => button.classList.remove('active')); 
+            const worldButton = document.querySelector('[data-continent="world"]');
+            if (worldButton) {
+                worldButton.classList.add('active');
+            }
+    
+            return;
+        }
+
         if (visibleCount <= 3) {
             swiperButton.style.display = 'none';
         } else {
             swiperButton.style.display = 'flex';
         }
+
+        swiper.slideTo(0, 0);
     }
     
     ratedMenuButtons.forEach(ratedButton => {
@@ -46,15 +61,25 @@ document.addEventListener("DOMContentLoaded", function(){
             const selectedContinent = ratedButton.getAttribute('data-continent');
 
             updateCardsAndButton(selectedContinent);
-
-            swiper.slideTo(0, 0);
         });
     });
 
-    swiper.init();
     
 
 
+    // var swiperReview = new Swiper(".mySwiperRewiev", {
+    //     slidesPerView: 2,
+    //     spaceBetween: 94,
+    //     loop: true,
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //       clickable: true,
+    //     },
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    // });
 
 
 
